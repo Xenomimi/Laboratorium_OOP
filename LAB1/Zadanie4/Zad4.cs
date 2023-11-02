@@ -74,7 +74,7 @@
 
         static void Iloczyn_el()
         {
-            double iloczyn = 0;
+            double iloczyn = 1;
 
             foreach (var item in doubles)
             {
