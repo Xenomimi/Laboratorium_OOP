@@ -24,7 +24,7 @@ namespace Zadanie1
             set { }
         }
 
-        public void View()
+        public new void View()
         {
             base.View();
             ViewBook();
