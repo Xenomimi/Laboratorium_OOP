@@ -11,7 +11,7 @@ namespace Zadanie1
         public override void Draw()
         {
             base.Draw();
-            Console.WriteLine($"Rysuje trojkat x = {X} y = {Y} Height = {Height} Width = {Width}");
+            Console.WriteLine($"Rysuje circle x = {X} y = {Y} Height = {Height} Width = {Width}");
         }
     }
 }
