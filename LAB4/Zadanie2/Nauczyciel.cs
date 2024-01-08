@@ -9,18 +9,24 @@ namespace Zadanie2
     internal class Nauczyciel : Uczen
     {
         public string TytulNaukowy { get; set; }
-
         public List<Uczen> PodwladniUczniowie { get; set; }
 
-        public void WhichStudentCanGoHomeAlone(DateTime dateToCheck)
+        // Nie używam argumentu (Datetime dateToCheck) jak w treści zadania, ponieważ
+        // wiek ucznia możemy określać na podstawie numeru PESEL
+        public void WhichStudentCanGoHomeAlone()
         {
+            Console.WriteLine("Pan {0} {1} powiedział, że...", TytulNaukowy, GetFullName());
             foreach (Uczen uczen in PodwladniUczniowie)
             {
-                if (uczen.MozeSamWracacDoDomu == true)
-                {
-                    Console.WriteLine(uczen);
-                }
+                // Na początku sprawdzamy czy uczeń ma odpowiedni wiek
+                if (uczen.GetAge() >= 12)
+                    Console.WriteLine(uczen.GetFullName());
+                // Następnie czy ma pozwolenie
+                // Jeżeli uczeń ma pozwolenie, to może sam wracać do domu
+                else if (uczen.CanGoAloneToHome())
+                    Console.WriteLine(uczen.GetFullName());
             }
+            Console.WriteLine("...mogą sami wracać do domu.");
         }
     }
 }
