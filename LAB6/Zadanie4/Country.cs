@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Zadanie4
 {
-    internal class Country
+    public class Country
     {
         public string Id { get; set; }
-        public int Value { get; set; }
+        public string Value { get; set; }
     }
 }

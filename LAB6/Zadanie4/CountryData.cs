@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace Zadanie4
 {
-    internal class CountryData
+    public class CountryData
     {
-        public List<Indicator> Indicator { get; set; }
-        public List<Country> Country { get; set; }
+        public Indicator Indicator { get; set; }
+        public Country Country { get; set; }
+        public string Value { get; set; }
+        public string Decimal { get; set; }
+        public string Date { get; set; }
     }
 }

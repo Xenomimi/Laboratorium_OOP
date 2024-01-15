@@ -11,7 +11,7 @@ namespace Zadanie3
 
         static void Main(string[] args)
         {
-            string path = @"C:\Users\Dom\Desktop\OOP\LAB6\Zadanie3\pesel.txt";
+            string path = @"__tutaj_pelna_sciezka_do_pliku__";
             StreamReader sr = System.IO.File.OpenText(path);
             string outputText = "";
             int i = 1; // licznik do linijek tekstu
